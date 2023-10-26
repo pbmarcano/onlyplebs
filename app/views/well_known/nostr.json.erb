@@ -1,0 +1,7 @@
+{
+  "names": {
+  <% @verifications.each do |v| %>
+    "<%= v.name %>": "<%= v.pubkey %>",
+  <% end %>
+  }
+}
