@@ -1,9 +1,9 @@
 class WellKnownController < ApplicationController
   def nostr
     if params[:name].present?
-      @verifications = Verification.where(name: params[:name])
+      @internet_ids = InternetIdentity.where(name: params[:name])
     else
-      @verifications = Verification.all
+      @internet_ids = InternetIdentity.all
     end
 
     render 'well_known/nostr', content_type: 'application/json'
